@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Order summary card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            azul: {
+              palido: 'hsl(225, 100%, 94%)',
+              claro: 'hsl(245, 75%, 52%)',
+              muitopalido: 'hsl(225, 100%, 97%)',
+              dessaturado: 'hsl(224, 23%, 55%)',
+              escuro: 'hsl(223, 47%, 23%)',
+              fundo:'(hsl: 230, 75%, 98%)'
+          },
+        },
+        fontFamily: {
+          redhat: ['Red Hat Display', 'sans-serif']
+        },
+        backgroundImage: {
+          mobile: "url('./images/pattern-background-desktop.svg')",
+        },
+      }
+    }
+  } 
+  </script>
+</head>
+
+<body class="h-screen w-screen flex flex-col justify-center items-center bg-[url('./images/pattern-background-mobile.svg')] bg-no-repeat bg-cover font-redhat lg:bg-[url('./images/pattern-background-desktop.svg')]" >
+    <section class="w-11/12 max-w-sm m-auto rounded-3xl bg-neutral-50 flex flex-col items-center">
+      <img src="./images/illustration-hero.svg"
+          alt="Ilustração de uma pessoa ouvindo música em seu aparelho celular através dos fones de ouvido" class="rounded-t-3xl mb-8">
+      <div class="flex flex-col w-10/12 text-center gap-4 mb-4">
+        <h1 class="font-black text-xl text-azul-escuro"> Order Summary</h1>
+        <p class="text-azul-dessaturado font-medium">You can now listen to millions of songs, audiobooks, and podcasts on any
+          device anywhere you like!</p>
+      </div>
+      <article class="flex justify-between items-center w-5/6 bg-azul-muitopalido p-4 rounded-xl mb-8">
+        <div class="">
+          <img src="./images/icon-music.svg">
+        </div>
+        <div class="mr-auto pl-4">
+          <h2 class="text-azul-escuro font-black"> Annual Plan</h2>
+          <h3 class="text-azul-dessaturado font-medium"> $59.99/year</h3>
+        </div>
+        <a href="" class="text-sm text-azul-claro font-bold underline decoration-1 hover:opacity-70 hover:no-underline">Change</a>
+      </article>
+      <div class="flex flex-col w-5/6 text-center">
+        <button class="bg-azul-claro w-100% p-3 rounded-xl font-bold text-neutral-50 shadow-2xl hover:opacity-70">Proceed to Payment</button>
+        <a class="pt-4 pb-8 text-azul-dessaturado font-bold hover:text-azul-escuro hover:cursor-pointer">Cancel Order</a>
+      </div>
+    </section>
+</body>
+
+</html>
